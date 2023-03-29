@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <windows.h>
-void ShowMenu (int choice);
+void ShowMenu (char choice);
 void Language(int choice);
 // Choosing language
 

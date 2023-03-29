@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Game\Introduction\intro.cpp"
 #include "main.h"
 
 int choice;
@@ -8,37 +9,34 @@ int main(){
     ShowMenu(choice);
     return 0; 
 }
+PlayerClass p1;
 //Showing up game menu
-void ShowMenu (int choice){
-    while(1)
+void ShowMenu (char choice){
+    while(true)
     {
-    system("cls");
-    std::cout << "Menu\n";
-    std::cout << "[1]. Play\n";
-    std::cout << "[2]. Language\n";
-    std::cout << "[3]. Quit\n";
-    std::cout << "Your choice: ";
-    switch (choice)
-    {
-    case 1:
-        std::cout << "Play";
-        break;
-    
-    case 2: 
-        Language(choice);
-        break;
-
-    case 3:
         system("cls");
-        std::cout << "Quit\n";
-        Sleep(1000);
-        exit(0);
+        std::cout << "Menu\n";
+        std::cout << "[1]. Play\n";
+        std::cout << "[2]. Language\n";
+        std::cout << "[3]. Quit\n";
+        std::cout << "Choice: ";
+        switch (choice)
+        {
+        case '1':
+            p1.ChooseClass();
+            break;
+        
+        case '2': 
+            Language(choice);
+            break;
 
-    default:
-        break;
-    }
-    
-    std::cin >> choice;  
+        case '3':
+            system("cls");
+            std::cout << "Quit\n";
+            Sleep(1000);
+            exit(0);
+        }
+        std::cin >> choice;
     }
 }
 
@@ -55,14 +53,14 @@ void Language(int choice){
 
     switch (choice)
     {
-    case 0:
+    case '0':
         //std::cout << "oke";
         ShowMenu(choice);
         break;
-    case 1:
+    case '1':
         std::cout << "You choose english";
         break;
-    case 2:
+    case '2':
         std::cout << "Wybrales polski";
         break;
     default:
