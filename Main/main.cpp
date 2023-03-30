@@ -14,26 +14,31 @@ PlayerClass p1;
 void ShowMenu (char choice){
     while(true)
     {
-        system("cls");
-        std::cout << "Menu\n";
-        std::cout << "[1]. Play\n";
-        std::cout << "[2]. Language\n";
-        std::cout << "[3]. Quit\n";
-        std::cout << "Choice: ";
+        //system("cls");
+        std::cout << "/-----/\t  Menu\t\t/-----/" << std::endl;
+        std::cout << "/-----/\t  [1]. Play\t/-----/" << std::endl;
+       // std::cout << "[2]. Language\n";
+        std::cout << "/-----/\t  [2]. Quit\t/-----/" << std::endl;
+        std::cout << "/-----/\t  Choice: ";
         switch (choice)
         {
         case '1':
             p1.ChooseClass();
             break;
         
-        case '2': 
+        /*case '2': 
             Language(choice);
             break;
-
-        case '3':
+        */
+        case '2':
             system("cls");
-            std::cout << "Quit\n";
-            Sleep(1000);
+            std::cout << "Quiting.";
+            Sleep(300);
+            system("cls");
+            std::cout << "Quiting..";
+            Sleep(300);
+            system("cls");
+            std::cout << "Quiting...";
             exit(0);
         }
         std::cin >> choice;
@@ -41,7 +46,7 @@ void ShowMenu (char choice){
 }
 
 //Change game language
-void Language(int choice){
+/*void Language(int choice){
     system("cls");
     while (choice != -1)
     {
@@ -71,3 +76,4 @@ void Language(int choice){
     }
     }
 }
+*/
